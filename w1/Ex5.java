@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class Ex5{
     public static void main(String[] args){
-        int[] myString = {-3,-2,-1,0,1,2};
+        int[] myString = {0,-1,2,-3,1,-2};
+        Arrays.sort(myString);
         int len = myString.length;
         int a,b,c,d;
         String[] answer = {};
