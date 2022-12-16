@@ -12,23 +12,23 @@ public class Ex5{
         return ans;
     }
     public static void main(String[] args){
-        int[] arr = {-3,2,0,1,-2,-1};
+        int[] arr = {-4,-3,2,0,1,-2,-1,3,4};
+        // -3 -2 -1 0 1 2 3
         Arrays.sort(arr);
         int len = arr.length;
-        int a,p;
-
-        for (int i=0;i<(len/2);i++){
-            for (int j=1;j<len/2;j++){
-                p = len-j;
-                a = -(arr[i]+arr[p]);
-                if (arr[i]!=arr[p] & arr[i]!=a & arr[p]!=a & in(arr,a)){
-                    System.out.print(arr[p]);
+        int a;
+        
+        for (int i=0;i<arr.length;i++){
+            for (int j=0;j<arr.length;j++){
+                a = -arr[i]-arr[len-1-j];
+                if (arr[i]!=arr[len-1-j] & arr[i]!=a & arr[len-1-j]!=a & in(arr,a) & arr[i]>0 & arr[len-1-j]>=0){
+                    System.out.print(arr[len-1-j]);
                     System.out.print(arr[i]);
                     System.out.print(a);
                     System.out.print(" ");
-                    break;
                 }
             }
+            
         }
     }
 }

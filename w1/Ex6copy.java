@@ -1,18 +1,4 @@
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.Scanner; // Import the Scanner class to read text files
-import java.util.Arrays;
-
-public class Ex6{
-    static String[] readfile(){
-        String[] fromtxt = {};
-        int counter = 0;
-        try {
-            File myObj = new File("forEX6.txt");
-            Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                fromtxt = Arrays.copyOf(fromtxt, fromtxt.length+1);
+import java.io.File;import java.io.FileNotFoundException;  import java.util.Scanner; import java.util.Arrays;public class Ex6copy{static String[] readfile(){String[] fromtxt = {};        int counter = 0;try {File myObj = new File("forEX6.txt");Scanner myReader = new Scanner(myObj);while (myReader.hasNextLine()) {String data = myReader.nextLine();fromtxt = Arrays.copyOf(fromtxt, fromtxt.length+1);
                 fromtxt[counter] = data;
                 counter += 1;
             }
