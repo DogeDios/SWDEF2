@@ -1,6 +1,9 @@
 public class test {
     public static void main(String[] args){
-        int a =0;
-        a++;
+        for (int one=0;one<10;one++){
+            for (int two=one;two<11;two++){
+                System.out.println(two);
+            }
+        }
     }
 }
