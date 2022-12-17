@@ -23,8 +23,6 @@ public class Ex5{
     }
     public static void main(String[] args){
         int[] arr = {-3,-2,-1,0,1,2,3};
-        // -9 -7 -5 -4 -3 -2 -1 0 1 2 3 5 7
-        // -3 -2 -1 0 1 2 3
         Arrays.sort(arr);
         int len = arr.length;
         int a;
@@ -52,4 +50,3 @@ public class Ex5{
         }
     }
 }
-
