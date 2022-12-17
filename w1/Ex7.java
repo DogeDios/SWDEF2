@@ -15,7 +15,7 @@ public class Ex7 {
                     System.out.print("[x1,x2,x3,x4] = "); System.out.println(Arrays.toString(onetofour[i]));
                     System.out.print("[x5,x6,x7,x8] = "); System.out.println(Arrays.toString(fivetoeight[j]));
                     System.out.println("");
-                    break outerloop;
+                    // break outerloop;
                 }
             }
         }

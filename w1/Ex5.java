@@ -1,3 +1,5 @@
+// The python version is better
+
 import java.util.Arrays;
 
 public class Ex5{
