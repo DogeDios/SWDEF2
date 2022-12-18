@@ -66,27 +66,25 @@ class evaluation{
         int c1 = txtfile.c1; int arrone,arrfour;
         for (int two=0;two<arr.length;two++){
             for (int three=0;three<arr.length;three++){
-                for (int four=0;four<arr.length;four++){
-                    if (four == three | four == two | two == three){}
-                    else{
-                        arrfour = arr[three]+c1-arr[two];
-                        arrone = c1-arr[two];
+                if (two == three){}
+                else{
+                    arrfour = arr[three]+c1-arr[two];
+                    arrone = c1-arr[two];
 
-                        if (arrone != arr[two] & arrone != arr[three] & arrone != arr[four] & arrfour == arr[four] & arrone==arr[four]-arr[three] & ArraysOperation.in(arr, arrone)){ 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arrone;
+                    if (ArraysOperation.in(arr, arrone) & ArraysOperation.in(arr, arrfour) & arrone != arr[two] & arrone != arr[three] & arrone != arrfour & arrone==arrfour-arr[three]){ 
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arrone;
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[two];
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arr[two];
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[three];
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arr[three];
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[four];
-                        }
-                    } 
-                }
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arrfour;
+                    }
+                } 
             }
         }
         return ans;
@@ -99,29 +97,28 @@ class evaluation{
 
         for (int six=0;six<arr.length;six++){
             for (int seven=0;seven<arr.length;seven++){
-                for (int eight=0;eight<arr.length;eight++){
-                    if (eight == seven| eight == six | six == seven){}
-                    else{
-                        arrfive = arr[seven]-arr[eight]+c2;
-                        arreight = c2+arr[six];
+                if (six == seven){}
+                else{
+                    arrfive = arr[seven]-arr[six];
+                    arreight = c2+arr[six];
 
-                        if (arreight==arr[eight] & ArraysOperation.in(arr, arrfive) & arrfive != arr[six] & arrfive != arr[seven] & arrfive != arr[eight]){
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arrfive;
+                    if ( ArraysOperation.in(arr, arrfive) & ArraysOperation.in(arr, arreight) & arrfive != arr[six] & arrfive != arr[seven] & arrfive != arreight){
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arrfive;
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[six];
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arr[six];
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[seven];
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arr[seven];
 
-                            ans = Arrays.copyOf(ans, ans.length+1);
-                            ans[ans.length-1] = arr[eight];
-                        }
+                        ans = Arrays.copyOf(ans, ans.length+1);
+                        ans[ans.length-1] = arreight;
                     }
                 }
             }
         }
+        
         return ans;
     } 
 }
