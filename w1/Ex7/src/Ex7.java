@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class Ex7 {
     public static void main(String[] args){
-        int[][] onetofour = ArraysOperation.arraytoMatrix_lenx4(evaluation.calOnetoFour());
-        int[][] fivetoeight = ArraysOperation.arraytoMatrix_lenx4(evaluation.calFivetoEight());
+        int[][] onetofour = ArraysOperation.arraytoMatrix_lenx4(evaluation.calOnetoFour(txtfile.A(),txtfile.c1));
+        int[][] fivetoeight = ArraysOperation.arraytoMatrix_lenx4(evaluation.calFivetoEight(txtfile.A()));
 
         outerloop:
         for (int i=0;i<onetofour.length;i++){
@@ -15,7 +15,7 @@ public class Ex7 {
                     System.out.print("[x1,x2,x3,x4] = "); System.out.println(Arrays.toString(onetofour[i]));
                     System.out.print("[x5,x6,x7,x8] = "); System.out.println(Arrays.toString(fivetoeight[j]));
                     System.out.println("");
-                    // break outerloop;
+                    break outerloop;
                 }
             }
         }
@@ -60,10 +60,14 @@ class ArraysOperation{
 }
 
 class evaluation{
-    static int[] calOnetoFour(){
-        int[] arr = txtfile.A();
+    static int[] calOnetoFour(int[] arr,int c1){
+        
+        if (arr.length <4){
+            int[] noneArray = {};
+            return noneArray;
+        }
         int[] ans = {};
-        int c1 = txtfile.c1; int arrone,arrfour;
+        int arrone,arrfour;
         for (int two=0;two<arr.length;two++){
             for (int three=0;three<arr.length;three++){
                 if (two == three){}
@@ -90,8 +94,7 @@ class evaluation{
         return ans;
     }
 
-    static int[] calFivetoEight(){
-        int[] arr = txtfile.A();
+    static int[] calFivetoEight(int[] arr){
         int[] ans = {};
         int c2 = txtfile.c2; int arrfive,arreight;
 
@@ -128,7 +131,7 @@ class txtfile{
         String[] fromtxt = {};
         int counter = 0;
         try {
-            File myObj = new File("forEx7.txt");
+            File myObj = new File("assets\\forEx7.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
