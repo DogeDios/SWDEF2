@@ -1,17 +1,26 @@
 # This is the better version
 
 def threeSum(arr):
+    arr.sort()
     ans = []
-    for i in range(len(arr)):
-        for j in range(len(arr)):
-            a = -arr[i]-arr[j]
-            if i == j and a == arr[i] and a == arr[j]:
-                pass
+    if len(arr)<3:
+        return []
+    for i,j in enumerate(arr):
+        l = i+1
+        r = len(arr)-1
+        while l < r:
+            if i>0 and arr[i-1] == j:
+                break
+            summ = j+arr[l]+arr[r]
+            if summ<0:
+                l+=1
+            elif summ>0:
+                r-=1
             else:
-                if a in arr and arr[i] != arr[j] and arr[i]<0 and arr[j]>=0 and a > arr[i] and a < arr[j]:
-                    ans.append("[ {}, {}, {}]".format(arr[i],arr[j],a))
+                ans.append([arr[l],arr[r],j])
+                r-=1
     return ans
-arr = [-1,-2,-9,-5,9,7,5,6]
 
+arr = [-1,-2,0,1,2,-3,4,-3]
 print(threeSum(arr))
 
