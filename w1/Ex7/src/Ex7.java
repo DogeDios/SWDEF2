@@ -75,7 +75,10 @@ class evaluation{
                     arrfour = arr[three]+c1-arr[two];
                     arrone = c1-arr[two];
 
-                    if (ArraysOperation.in(arr, arrone) & ArraysOperation.in(arr, arrfour) & arrone != arr[two] & arrone != arr[three] & arrone != arrfour & arrone==arrfour-arr[three]){ 
+                    if (ArraysOperation.in(arr, arrone) & ArraysOperation.in(arr, arrfour) 
+                    & arrone != arr[two] & arrone != arr[three] & arrone != arrfour 
+                    & arrone==arrfour-arr[three]){ 
+                        
                         ans = Arrays.copyOf(ans, ans.length+1);
                         ans[ans.length-1] = arrone;
 

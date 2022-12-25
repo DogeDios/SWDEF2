@@ -3,7 +3,7 @@ import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 public class calOnetoFourTest {
-    
+
     @Test
     public void normalTest(){
         int[] arg = {20,70,130,150};
@@ -33,4 +33,5 @@ public class calOnetoFourTest {
 
         assertArrayEquals(expected, result);
     }
+
 }
