@@ -1,0 +1,2 @@
+Movies,Rate
+<bound method themovieDB.get_movies_names of <__main__.themovieDB object at 0x00000160B5ACBCA0>>,<bound method themovieDB.get_movies_rating of <__main__.themovieDB object at 0x00000160B5ACBCA0>>
